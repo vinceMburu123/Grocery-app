@@ -7,36 +7,37 @@
     <link rel="shortcut icon" href="/foodimages/Frame.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
-        
-    
-    <nav class="menu">
-        
-    </nav>
+   
     <nav class="navigation">
-        <a href="#" class="logo">Great Wall Store</a>
-        <ul class="menu">
+        <a href="/foodimages/bg1.avif" class="logo">Great Wall Store</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="menu" id="menu">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#category">Category</a></li>
             <li><a href="#popular-product">Our Packages</a></li>
             <li><a href="#clients">Our App</a></li>
             <li><a href="#about-us">About Us</a></li>
-            
         </ul>
         <div class="right-nav">
             <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
             <a href="#"><i class="far fa-heart"></i> <span id="like-count">0</span></a>
         </div>
     </nav>
+
+    <!-- Hero Section -->
     <div class="hero">
-        <img src="/foodimages/bg1.avif" alt="Hero Image">
-        <div class="content">
-           
-        </div>
+        <img src="/premium_photo-1674228288173-519727295a6c.avif" alt="Hero Image">
+        <div class="content"></div>
     </div>
 
+    <!-- Category Section -->
     <section id="category" class="category">
         <div class="category-heading">
             <h2>Category</h2>
@@ -47,8 +48,8 @@
         </div>
         <button class="shop-btn">Shop Now</button>
     </section>
-    
 
+    <!-- Popular Product Section -->
     <section id="popular-product">
         <div class="product-heading">
             <h3>Popular Product</h3>
@@ -109,67 +110,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Popular Bundle Section -->
     <section id="popular-bundle">
         <div class="product-heading">
             <h3>Popular Bundle</h3>
             <span>All</span>
         </div>
         <div class="product-container">
-            <div class="product-box">
-                <img src="/foodimages/tomato 2.png" alt="Tomato">
-                <strong>Tomato</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">$2</span>
-                <a href="#" class="cart-btn" onclick="addToCart(event)">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </a>
-                <a href="#" class="like-btn" onclick="likeProduct(event)">
-                    <i class="far fa-heart"></i>
-                    <span>0</span>
-                </a>
-            </div>
-            <div class="product-box">
-                <img src="/foodimages/orange-slice.png" alt="Orange">
-                <strong>Orange</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">$2</span>
-                <a href="#" class="cart-btn" onclick="addToCart(event)">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </a>
-                <a href="#" class="like-btn" onclick="likeProduct(event)">
-                    <i class="far fa-heart"></i>
-                    <span>0</span>
-                </a>
-            </div>
-            <div class="product-box">
-                <img src="/foodimages/pizza.jpg" alt="Pizza">
-                <strong>Pizza</strong>
-                <span class="quantity">1/2 KG</span>
-                <span class="price">$6</span>
-                <a href="#" class="cart-btn" onclick="addToCart(event)">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </a>
-                <a href="#" class="like-btn" onclick="likeProduct(event)">
-                    <i class="far fa-heart"></i>
-                    <span>0</span>
-                </a>
-            </div>
-            <div class="product-box">
-                <img src="/foodimages/images.jpg" alt="Beef">
-                <strong>Beef</strong>
-                <span class="quantity">1/2 KG</span>
-                <span class="price">$6</span>
-                <a href="#" class="cart-btn" onclick="addToCart(event)">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </a>
-                <a href="#" class="like-btn" onclick="likeProduct(event)">
-                    <i class="far fa-heart"></i>
-                    <span>0</span>
-                </a>
-            </div>
+            <!-- Repeat product-box structure as needed -->
         </div>
     </section>
 
+    <!-- Clients Section -->
     <section id="clients">
         <div class="client-heading">
             <h3 style="text-align:center">What Our Clients Say</h3>
@@ -177,12 +130,14 @@
         </div>
     </section>
 
+    <!-- Partner Section -->
     <section id="partner">
         <div class="partner-heading">
             <h3>Our Trusted Partners</h3>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <img src="/foodimages/payment.png" alt="Payment Methods">
         <p style="text-align: center;">&copy; 2024 Great Wall Store. All rights reserved.</p>
@@ -190,20 +145,15 @@
             <i class="fas fa-arrow-up"></i> Back to Top
         </a>
     </footer>
+
+    <!-- Contact Us -->
     <div class="contact-us">
         <a href="https://www.facebook.com/">Facebook</a>
         <a href="https://www.instagram.com/">Instagram</a>
     </div>
-    <div class="footer">
-        <a class="scroll-to-top"></a>
-    </div>
 
-   
-
+    <!-- Chatling Embed Script -->
     <script async data-id="7574426527" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-</body>
-</html>
     <script src="/mpesa-sdk.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
