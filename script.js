@@ -1,13 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Mobile menu toggle
+    const menuIcon = document.getElementById('mobile-menu');
+    const menu = document.getElementById('menu');
+
+    if (menuIcon && menu) {
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const menuLinks = document.querySelectorAll('.menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                menuIcon.classList.remove('active');
+            });
+        });
+    }
+
+    // Cart and Like functionality
     let cartCount = 0;
     let likeCount = 0;
 
     const updateCartCount = () => {
-        document.getElementById('cart-count').innerText = cartCount;
+        const cartCountElement = document.getElementById('cart-count');
+        if (cartCountElement) {
+            cartCountElement.innerText = cartCount;
+        }
     };
 
     const updateLikeCount = () => {
-        document.getElementById('like-count').innerText = likeCount;
+        const likeCountElement = document.getElementById('like-count');
+        if (likeCountElement) {
+            likeCountElement.innerText = likeCount;
+        }
     };
 
     window.addToCart = (event) => {
@@ -30,21 +57,4 @@ document.addEventListener('DOMContentLoaded', function() {
         updateLikeCount();
         alert('Product has been liked');
     };
-
-
-    const menuIcon = document.querySelector('.menu-icon');
-    const menu = document.querySelector('.menu');
-
-    if (menuIcon && menu) {
-        menuIcon.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-
-        const menuLinks = document.querySelectorAll('.menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('active');
-            });
-        });
-    }
 });
